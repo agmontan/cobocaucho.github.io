@@ -1,0 +1,131 @@
+/* Contact Media ---------------------------------- */ 
+.contact-media {
+    background-color: $title-color;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px 30px;
+    &_title,
+    &_subtitle {
+        color: $white-color;
+        a {
+            color: inherit;
+        }
+    }
+    &_subtitle {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 8px;
+        margin-top: -0.5em;
+    }
+    &_title {
+        font-size: 30px;
+        margin-bottom: -0.4em;
+    }
+}
+
+@include ml {
+    .contact-media_title {
+        font-size: 26px;
+    }
+}
+
+@include xs {
+    .contact-media {
+        flex-direction: column;
+        gap: 30px;
+        &_content {
+            text-align: center;
+        }
+    }
+}
+
+/* Contact Details ---------------------------------- */ 
+.contact-form,
+.appointment-form {
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        border: 1px solid transparent;
+        &:focus {
+            border-color: #eaeaea;
+        }
+    }
+}
+.contact-box {
+    border: 1px solid $border-color;
+    &_img {
+        margin: -1px;
+        img {
+            width: 100%;
+        }
+    }
+    &_icon {
+        i {
+            font-size: 48px;
+            color: $theme-color;
+        }
+    }
+    &_text {
+        margin-top: -0.08em;
+        margin-bottom: 2px;
+    }
+    &_link {
+        margin-bottom: -0.1em;
+        a {
+            color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    &_content {
+        padding: 40px;
+        display: flex;
+        gap: 15px 20px;
+        align-items: center;
+    }
+}
+
+.map-sec {
+    line-height: 1px;
+    iframe {
+        aspect-ratio: 16 / 4.6;
+        filter: grayscale(1);
+    }
+} 
+
+@include ml {
+    .contact-box {
+        &_content {
+            gap: 15px;
+            padding: 25px 15px;
+        }
+    }
+}
+
+@include md {
+    .map-sec {
+        iframe {
+            aspect-ratio: 16 / 6;
+        }
+    } 
+}
+
+@include sm {
+    .contact-box {
+        &_content {
+            justify-content: center;
+        }
+    }
+    .map-sec {
+        iframe {
+            height: 220px;
+        }
+    }
+}

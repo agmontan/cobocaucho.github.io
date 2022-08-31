@@ -1,0 +1,58 @@
+/* Why 1 ---------------------------------- */ 
+.why-img {
+    float: left;
+    margin-right: 30px;
+}
+.our-journey {
+    .journey-title {
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .journey-year {
+        font-family: $title-font;
+        display: block;
+        line-height: 1;
+        font-size: 80px;
+        font-weight: bold;
+        color: $theme-color;
+        margin-bottom: -0.1em;
+    }
+}
+.feature-journey {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    row-gap: 15px;
+    overflow: hidden;
+    margin-top: 40px;
+    padding-bottom: 5px;
+    margin-bottom: -20px;
+}
+@include sm {
+    .why-img {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* Why 2 ---------------------------------- */ 
+.as-video.style1 {
+    padding-right: 65px;
+    height: 100%;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@include ml {
+    .as-video.style1 {
+        padding-right: 0;
+    }
+}

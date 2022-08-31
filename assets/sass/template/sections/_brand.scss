@@ -1,0 +1,41 @@
+/* Brand 1 ---------------------------------- */
+.brand-sec {
+    position: relative;
+    &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        max-width: 1620px;
+        background-color: $theme-color;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(100% 0, calc(100% - 75px) 50%, 100% 100%, 0% 100%, 75px 50%, 0% 0%);
+    }
+}
+.brand-img {
+    text-align: center;
+}
+.brand-img2 {
+    text-align: center;
+    img {
+        filter: grayscale(100%);
+        opacity: 0.4;
+        transition: 0.4s ease-in-out;
+    }
+    &:hover {
+        img {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
+
+@include lg {
+    .brand-sec {
+        &:before {
+            clip-path: polygon(100% 0, calc(100% - 40px) 50%, 100% 100%, 0% 100%, 40px 50%, 0% 0%);
+        }
+    }
+}

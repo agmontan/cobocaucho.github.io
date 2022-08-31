@@ -1,0 +1,148 @@
+.footer-wrapper {
+  position: relative;
+  z-index: 2;
+  .newsletter-title {
+    color: $white-color;
+  }
+}
+.widget-area {
+  padding-top: $space;
+  padding-bottom: 75px;
+}
+
+.copyright-wrap {
+  padding: 29px 0;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+.footer-layout1 {
+  background-color: $title-color;
+  --body-color: #8b8e95;
+  .copyright-wrap {
+    padding: 40px 0;
+    background-color: #1B1F29;
+  }
+}
+
+@include lg {
+  .footer-layout1 .copyright-wrap {
+    padding: 25px 0;
+  }
+}
+
+@include md {
+  .footer-layout1 {
+    .widget-area {
+      padding-top: $space-mobile;
+      padding-bottom: 38px;
+    }
+  }
+}
+
+/* Footer 2 ---------------------------------- */
+.footer-layout2 {
+  --body-color: #8b8e95;
+  .widget-area {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+  .footer-top {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #262A35;
+  }
+  .copyright-wrap {
+    padding: 45px 0;
+    border-top: 1px solid #2A2F3D;
+  }
+  .copyright-text {
+    text-align: center;
+  }
+}
+.footer-logo {
+  background-color: #1B1F29;
+  padding: 30px 15px;
+  text-align: center;
+}
+.newsletter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .newsletter-title {
+    margin-bottom: 0;
+    max-width: 420px;
+  }
+}
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 424px;
+  input {
+    background-color: #252934;
+    border: none;
+    &:focus {
+      background-color: #252934;
+      color: $body-color
+    }
+  }
+  .as-btn {
+    min-width: 150px;
+  }
+}
+
+@include lg {
+  .footer-top {
+    .footer-logo {
+      max-width: 280px;
+      margin: 0 auto 30px auto;
+    }
+  }
+}
+
+@include md {
+  .footer-layout2 {
+    .widget-area {
+      padding-top: 60px;
+      padding-bottom: 35px;
+    }
+    .footer-top {
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+    .copyright-wrap {
+      padding: 30px 0;
+    }
+  }
+  .footer-wrapper {
+    .newsletter-title {
+      font-size: 26px;
+    }
+    .newsletter-form {
+      max-width: 380px;
+    }
+  }
+}
+
+@include sm {
+  .newsletter-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .newsletter-title {
+      text-align: center;
+    }
+  }
+  .footer-wrapper .newsletter-form {
+    max-width: 500px;
+  }
+}
+
+@include vxs {
+  .newsletter-form .as-btn {
+    min-width: 110px;
+    padding: 22px 15px;
+  }
+}

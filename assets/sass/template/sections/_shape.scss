@@ -1,0 +1,99 @@
+.position-relative {
+    z-index: 1;
+}
+.footer-shape1,
+.footer-shape2 {
+    position: absolute;
+    z-index: -1;
+}
+.footer-shape1 {
+    top: 0;
+    left: -70px;
+    animation: movingX 10s linear infinite;
+}
+.footer-shape2 {
+    top: 0;
+    right: 0;
+    animation: jumpReverseAni 7s linear infinite;
+}
+
+.body-shape1,
+.body-shape2,
+.body-shape3,
+.body-shape4,
+.body-shape5,
+.body-shape6 {
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+}
+.body-shape1 {
+    top: 0;
+    right: 0;
+    animation: jumpReverseAni 7s linear infinite;
+}
+.body-shape2 {
+    bottom: 4%;
+    right: 0;
+    animation: jumpAni 7s linear infinite;
+}
+.body-shape3 {
+    left: 0;
+    top: 0;
+    animation: jumpReverseAni 7s linear infinite;
+}
+.body-shape4 {
+    right: 0;
+    bottom: 0;
+    animation: movingX 10s linear infinite;
+}
+.body-shape5 {
+    top: 0;
+    right: 0;
+}
+.body-shape6 {
+    top: 0;
+    right: 0;
+}
+
+@include xl {
+    .body-shape5,
+    .body-shape6 {
+        max-width: 47%;
+    }
+}
+
+@include lg {
+    .body-shape2 {
+        max-width: 300px;
+    }
+    .body-shape5 {
+        max-width: 73.2%;
+        top: unset;
+        bottom: 0;
+    }
+    .body-shape6 {
+        max-width: 70%;
+    }
+}
+
+@include md {
+    .body-shape5 {
+        max-width: 88%;
+    }
+}
+
+@include sm {
+    .footer-shape1 {
+        max-width: 300px;
+    }
+    .footer-shape2 {
+        max-width: 200px;
+    }
+    .body-shape2 {
+        max-width: 150px;
+    }
+    .body-shape5 {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,199 @@
+/* Project 1 ---------------------------------- */ 
+// Project Image and Button is global
+.project-img {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    img {
+        width: 100%;
+        transition: 0.4s ease-in-out;
+    }
+    &:before {
+        content: "";
+        @include equal-size(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $title-color;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        z-index: 1;
+    }
+}
+.project-btn {
+    background-color: $white-color;
+    color: $theme-color;
+    @include equal-size-lineHeight(60px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: 0.4s ease-in-out;
+    text-align: center;
+    outline: 0px solid rgba($color: #fff, $alpha: 0.13);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    &:hover {
+        outline: 15px solid rgba($color: #fff, $alpha: 0.13);
+    }
+}
+.project-card {
+    position: relative;
+    .shape {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: -400px;
+            right: 0;
+            border-style: solid;
+            border-width: 0 380px 110px 0;
+            visibility: hidden;
+            opacity: 0;
+            border-color: transparent $title-color transparent transparent;
+            transition: 0.5s ease-in-out;
+            z-index: 0;
+        }
+        &:before {
+            border-width: 0 350px 100px 0;
+            border-color: transparent $theme-color transparent transparent;
+            transition-delay: 0.1s;
+            z-index: 1;
+        }
+    }
+    .project-btn {
+        background-color: $white-color;
+        color: $theme-color;
+        @include equal-size-lineHeight(60px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        transition: 0.4s ease-in-out;
+        text-align: center;
+        outline: 0px solid rgba($color: #fff, $alpha: 0.13);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+        &:hover {
+            outline: 15px solid rgba($color: #fff, $alpha: 0.13);
+        }
+    }
+    &:hover {
+        .project-img {
+            &:before {
+                visibility: visible;
+                opacity: 0.3;
+            }
+            img {
+                filter: grayscale(100%);
+            }
+        }
+        .shape {
+            &:before,
+            &:after {
+                top: 0;
+            }
+            &:before {
+                visibility: visible;
+                opacity: 0.7;
+            }
+            &:after {
+                visibility: visible;
+                opacity: 0.27;
+            }
+        }
+        .project-btn {
+            transform: translate(-50%, -50%);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.icon-box {
+    &.style2 {
+        .slick-arrow {
+            background-color: transparent;
+            border: 2px solid #232836;
+            color: $white-color;
+            font-weight: 500;
+            text-transform: uppercase;
+            width: auto;
+            padding: 5px 30px;
+            margin-right: 0;
+            &:hover {
+                background-color: $theme-color;
+                border-color: $theme-color;
+            }
+            &:first-child {
+                margin-right: 15px;
+                i {
+                    margin-right: 5px;
+                }
+            }
+            &:last-child {
+                i {
+                    margin-left: 5px;
+                }
+            }
+            @include md {
+                --icon-size: 50px;
+                font-size: 14px;
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+/* Project 2 ---------------------------------- */
+.project-box {
+    position: relative;
+    &:hover {
+        .project-img {
+            &:before {
+                visibility: visible;
+                opacity: 0.6;
+            }
+        }
+        .project-btn {
+            transform: translate(-50%, -50%);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+/* Project Details ---------------------------------- */ 
+.project-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #EAECF3;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &_title {
+        font-family: $body-font;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    &_icon {
+        i {
+            @include equal-size-lineHeight(50px);
+            background-color: $white-color;
+            color: $theme-color;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+    &_text {
+        margin-bottom: 0;
+    }
+}

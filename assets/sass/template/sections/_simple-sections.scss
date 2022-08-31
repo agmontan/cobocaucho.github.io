@@ -1,0 +1,205 @@
+.as-video2 {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.4s ease-in-out;
+    }
+    .video-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &:hover {
+        img {
+            transform: scale(1.06);
+        }
+    }
+}
+.video-btn {
+    font-size: 36px;
+    color: $white-color;
+    background-color: $theme-color;
+    padding: 42px 57px;
+    &:hover {
+        background-color: $title-color;
+        color: $white-color;
+    }
+    @include sm {
+        font-size: 24px;
+        padding: 22px 37px;
+    }
+}
+
+.cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 80px;
+    &_title {
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    @include md {
+        padding: 50px;
+    }
+    @include sm {
+        padding: 40px 15px;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.checklist {
+    ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    li {
+        color: $title-color;
+        margin-bottom: 10px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 28px;
+        &:before {
+            content: "\f058";
+            font-family: $icon-font;
+            font-weight: 900;
+            color: $theme-color;
+            position: absolute;
+            left: 0;
+            transition: 0.3s ease-in-out;
+        }
+        &:first-child {
+            margin-top: -0.5em;
+        }
+        &:last-child {
+            margin-bottom: -0.5em;
+        }
+    }
+    &.style2 {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 35px;
+            @include sm {
+                grid-template-columns: repeat(1, 1fr); 
+            }
+        }
+        li {
+            color: $body-color;
+            &:before {
+                font-weight: 500;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &.style3 {
+        li {
+            color: $body-color;
+            &:before {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.img-box-1 {
+    position: relative;
+    display: inline-block;
+    .shape {
+        position: absolute;
+        bottom: -110px;
+        right: -110px;
+        animation: rotate 8s linear infinite;
+        @include xl {
+            right: -30px;
+            bottom: -30px;
+        }
+        @include ml {
+            max-width: 150px;
+        }
+    }
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &_icon {
+        color: $title-color;
+        font-size: 24px;
+        @include equal-size-lineHeight(60px);
+        background-color: $theme-color;
+        color: $white-color;
+        text-align: center;
+        border-radius: 50%;
+    }
+    &_label {
+        font-size: 14px;
+        font-family: $title-font;
+        text-transform: uppercase;
+        color: $white-color;
+        display: block;
+        margin-bottom: 4px;
+    }
+    &_link {
+        color: $white-color;
+        font-family: $title-font;
+        font-size: 24px;
+        font-weight: 600;
+        a {
+        color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        @include sm {
+            font-size: 20px;
+        }
+    }
+}
+
+.cta-shape-wrap {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: "";
+        height: 100%;
+        width: 1400px;
+        position: absolute;
+        top: 0;
+        right: 240px;
+        background-color: $title-color;
+        clip-path: polygon(0 0, 100% 21%, 100% 100%, 0% 100%);
+        z-index: -1;
+        @include hd {
+            width: 4999px;
+        }
+        @include lg {
+            right: 0;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+        @include xs {
+            right: -12px;
+        }
+    }
+}
+
+.car-img {
+    margin-top: -31px;
+    margin-bottom: -150px;
+    @include md {
+        margin-top: -80px;
+        margin-bottom: 20px;
+    }
+}
