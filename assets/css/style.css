@@ -10570,7 +10570,8 @@ span.select2-selection.select2-selection--single:focus {
 
 .blog-box-wrap {
   display: grid;
-  grid-template-areas: 'one one one one one one one one one two two two' 'three three three three three three three three three two two two';
+  grid-template-areas: 'one one one one one one one one one two two two'
+ 'three three three three three three three three three two two two';
 }
 
 .blog-box .blog-img {
@@ -10676,7 +10677,9 @@ span.select2-selection.select2-selection--single:focus {
   }
   .blog-box-wrap {
     gap: 24px;
-    grid-template-areas: 'one one' 'two two' 'three three';
+    grid-template-areas: 'one one'
+ 'two two'
+ 'three three';
   }
   .blog-box .blog-text {
     display: none;
